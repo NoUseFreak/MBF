@@ -1,0 +1,13 @@
+{
+  "name": "mtgbf",
+  "version": "0.0.0",
+  "authors": [
+    "Dries De Peuter <dries@nousefreak.be>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "traceur-runtime": "~0.0.87",
+    "jquery": "~2.1.3",
+    "underscore": "~1.8.2"
+  }
+}

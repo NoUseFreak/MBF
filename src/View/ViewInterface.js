@@ -1,0 +1,6 @@
+
+class ViewInterface
+{
+    init() {}
+    setPlayers() {}
+}
