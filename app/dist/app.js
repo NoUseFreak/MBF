@@ -1,9 +1,9 @@
 "use strict";
-var Mtgbf = function Mtgbf() {
+var Mbf = function Mbf() {
   this.players = [];
   this.activePlayerIndex = null;
 };
-($traceurRuntime.createClass)(Mtgbf, {
+($traceurRuntime.createClass)(Mbf, {
   addPlayer: function(player) {
     if (player.deck === null) {
       throw "Player '{0}' did not bring a deck!".replace("{0}", player.name);
@@ -110,18 +110,18 @@ var Mtgbf = function Mtgbf() {
 "use strict";
 window.onload = function() {
   var view = new DebugView();
-  var mtfbf = new Mtgbf();
+  var mbf = new Mbf();
   var jeff = new Player('Jeff');
   jeff.setDeck(new Deck([new Card("card1", {"name": "card1"})]));
-  mtfbf.addPlayer(jeff);
+  mbf.addPlayer(jeff);
   var dries = new Player('Dries');
   dries.setDeck(new Deck([new Card("card2", {"name": "card2"})]));
-  mtfbf.addPlayer(dries);
-  view.renderPlayers(mtfbf.players);
-  mtfbf.prepare();
-  view.renderActivePlayer(mtfbf.getActivePlayer());
-  mtfbf.getActivePlayer().getHand().addCards(mtfbf.getActivePlayer().getDeck().draw());
-  view.updatePlayer(mtfbf.getActivePlayer());
+  mbf.addPlayer(dries);
+  view.renderPlayers(mbf.players);
+  mbf.prepare();
+  view.renderActivePlayer(mbf.getActivePlayer());
+  mbf.getActivePlayer().getHand().addCards(mbf.getActivePlayer().getDeck().draw());
+  view.updatePlayer(mbf.getActivePlayer());
 };
 
 "use strict";

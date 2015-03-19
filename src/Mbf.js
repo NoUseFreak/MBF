@@ -1,5 +1,5 @@
 
-class Mtgbf
+class Mbf
 {
     constructor(){
         this.players = [];

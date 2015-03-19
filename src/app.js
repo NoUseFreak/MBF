@@ -2,27 +2,26 @@
 window.onload = function() {
 
     var view = new DebugView();
-    var mtfbf = new Mtgbf();
+    var mbf = new Mbf();
 
     var jeff  = new Player('Jeff');
     jeff.setDeck(new Deck([
         new Card( "card1", {"name": "card1"})
     ]));
-    mtfbf.addPlayer(jeff);
+    mbf.addPlayer(jeff);
 
     var dries = new Player('Dries');
     dries.setDeck(new Deck([
         new Card("card2", {"name": "card2"})
     ]));
-    mtfbf.addPlayer(dries);
+    mbf.addPlayer(dries);
 
-    view.renderPlayers(mtfbf.players);
+    view.renderPlayers(mbf.players);
 
-    mtfbf.prepare();
-    view.renderActivePlayer(mtfbf.getActivePlayer());
+    mbf.prepare();
+    view.renderActivePlayer(mbf.getActivePlayer());
 
-    mtfbf.getActivePlayer().getHand().addCards(mtfbf.getActivePlayer().getDeck().draw());
+    mbf.getActivePlayer().getHand().addCards(mbf.getActivePlayer().getDeck().draw());
 
-    view.updatePlayer(mtfbf.getActivePlayer());
-
+    view.updatePlayer(mbf.getActivePlayer());
 };
