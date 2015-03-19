@@ -1,9 +1,6 @@
 
 class CardSlot {
-    constructor(cards) {
-        if (typeof(cards) == "undefined") {
-            cards = [];
-        }
+    constructor(cards = []) {
         this.cards = cards;
     }
 

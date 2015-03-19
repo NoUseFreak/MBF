@@ -1,10 +1,6 @@
 class Dice
 {
-    constructor(sides) {
-        if (typeof(sides) == "undefined") {
-            sides = 20;
-        }
-
+    constructor(sides = 20) {
         this.sides = sides;
         this.value = this.sides;
     }
